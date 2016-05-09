@@ -1,18 +1,36 @@
 <resources>
-    <string name="app_name">NY Checkins</string>
+    <string name="app_name" translatable="false">Big (App)le</string>
     <string name="title_activity_ny_map">Map</string>
-    <string name="title_activity_login">Sign in</string>
 
-    <!-- Strings related to login -->
-    <string name="prompt_email">Email</string>
-    <string name="prompt_password">Password (optional)</string>
-    <string name="action_sign_in">Sign in or register</string>
-    <string name="action_sign_in_short">Sign in</string>
-    <string name="error_invalid_email">This email address is invalid</string>
-    <string name="error_invalid_password">This password is too short</string>
-    <string name="error_incorrect_password">This password is incorrect</string>
-    <string name="error_field_required">This field is required</string>
-    <string name="permission_rationale">"Contacts permissions are needed for providing email
-        completions."
+    <string name="hello">Hello!</string>
+    <string name="mainButton">FIND NYS\' MOST POPULAR PLACES</string>
+    <string name="info">Based on Foursquare</string>
+
+    <string name="info_menu">Info</string>
+    <string name="settings_menu">Settings</string>
+
+    <string name="info_title">Info about the app</string>
+    <string name="info_text">This app is part of the course \"Distributed Systems\" of AUEB.
+                    Just click the button \"Find NYs most popular places\" and you will be transfered
+                    in NYC location at Google Maps. Select the area you are interested in and the top-K
+                    locations you want to see and click the button \"Done\". You\' ll get the final results
+                    with Markers on the map. Enough talking, let\'s try the app by yourselves!
     </string>
+    <string name="info_dev_title">Developers</string>
+    <string name="info_dev">-Bill Bouzas\n-Panagiotis Chalkiotis\n-Panagiotis Tassias\n-Mary Tzelou</string>
+
+    <string name="settings_title">Settings</string>
+    <string name="language_title">Which language you prefer?</string>
+    <string-array name="languages">
+        <item>English</item>
+        <item>Greek</item>
+    </string-array>
+    <string name="save_button">SAVE</string>
+    <string name="alert_title">Saving changes...</string>
+    <string name="alert_message">App will close now for changes to be saved!</string>
+    <string name="title_activity_maps">Map</string>
+
+    <string name="topK">Top Results?</string>
+    <string name="done_button">DONE</string>
+
 </resources>

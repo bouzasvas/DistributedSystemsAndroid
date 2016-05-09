@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="mainButton">ΒΡΕΣ ΤΑ ΔΗΜΟΦΗΛΕΣΤΕΡΑ ΜΕΡΗ ΣΤΗ ΝΥ</string>
+    <string name="info">Βασισμένο στο Foursquare</string>
+    <string name="hello">Γεια!</string>
+    <string name="info_dev_title">Προγραμματιστές</string>
+    <string name="info_menu">Σχετικά</string>
+    <string name="info_title">Σχετικά με την εφαρμογή</string>
+    <string name="language_title">Ποια γλώσσα προτιμάτε;</string>
+    <string name="settings_menu">Ρυθμίσεις</string>
+    <string name="settings_title">Ρυθμίσεις</string>
+    <string name="title_activity_ny_map">Χάρτης</string>
+    <string name="info_dev">-Βασίλης Μπούζας\n-Παναγιώτης Χαλκιώτης\n-Παναγιώτης Τασσιάς\n-Μαίρη Τζέλου</string>
+    <string name="info_text">Η εφαρμογή αναπτύχθηκε για τους σκοπούς του μαθήματος \"Κατανεμημένα Συστήματα\" του ΟΠΑ.
+                            Πατώντας το κουμπί \"ΒΡΕΣ ΤΑ ΔΗΜΟΦΗΛΕΣΤΕΡΑ ΜΕΡΗ ΣΤΗ ΝΥ\" θα μεταφερθείτε στην πόλη της Νέας Υόρκης
+                            στο Google Maps. Επέλεξε την περιοχή που σε ενδιαφέρει καθώς και τα τοπ-Κ δημοφιλέστερα αποτελέσματα
+                            που θες να δεις και πάτα το κουμπί \"ΕΤΟΙΜΟΣ\". Τα τελικά αποτελέσματα θα φαίνονται με Markers πάνω
+                            στον χάρτη. Αρκετά με τα λόγια, ας δοκιμάσουμε την εφαρμογή!
+    </string>
+    <string-array name="languages">
+        <item>Αγγλικά</item>
+        <item>Ελληνικά</item>
+    </string-array>
+    <string name="save_button">ΑΠΟΘΗΚΕΥΣΗ</string>
+    <string name="alert_title">Αποθήκευση Αλλαγών...</string>
+    <string name="alert_message">Η εφαρμογή θα κλείσει για την αποθήκευση των αλλαγών!</string>
+    <string name="title_activity_maps">Χάρτης</string>
+    <string name="topK">Κορυφαία Αποτελέσματα;</string>
+    <string name="done_button">EΤΟΙΜΟΣ</string>
+</resources>
