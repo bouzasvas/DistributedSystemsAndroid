@@ -25,6 +25,23 @@
     <string name="alert_title">Αποθήκευση Αλλαγών...</string>
     <string name="alert_message">Η εφαρμογή θα κλείσει για την αποθήκευση των αλλαγών!</string>
     <string name="title_activity_maps">Χάρτης</string>
-    <string name="topK">Κορυφαία Αποτελέσματα;</string>
     <string name="done_button">EΤΟΙΜΟΣ</string>
+    <string name="howToUse">Πως να χρησιμοποιήσω την εφαρμογή;</string>
+    <string name="howToUseText">Πατώντας συνεχόμενα πάνω στον χάρτη θα εμφανιστεί μία πινέζα. Αν ξαναπατήσεις συνεχόμενα θα
+                            δημιουργηθεί ένας κύκλος με ακτίνα το σημείο που πάτησες. Μπορείς να μετακινήσεις είτε το κέντρο
+                            είτε την ακτίνα στο σημείο που θες προκειμένου να επιλέξεις την περιοχή για την οποία θες να δεις
+                            τα δημοφιλέστερα μέρη. Αν πατήσεις συνεχόμενα ξανά ο κύκός θα εξαφανιστεί ώστε να ξεκινήσεις από
+                            την αρχή την διαδικασία. Όταν είσαι έτοιμος πάτα το κουμπί \"ΕΤΟΙΜΟΣ\" για να πάρεις τα αποτελέσματα.
+    </string>
+    <string name="topK">Τοπ αποτελέσματα;</string>
+    <string name="mapper_offline">Πρόβλημα με τη σύνδεση!</string>
+    <string name="mapper_offline_text">Είσαι εκτός σύνδεσης ή οι Mappers δεν είναι διαθέσιμοι αυτή τη στιγμή...</string>
+    <string name="empty_text_title">Το πεδίο \"Τοπ αποτελέσματα;\" είναι κενό</string>
+    <string name="empty_text_message">Πρέπει πρώτα να βάλεις τιμή στο πεδίο και μετά να πατήσεις το ΕΤΟΙΜΟΣ</string>
+    <string name="done_message">Πάτα ΟΚ και περίμενε τα αποτελέσματα από τον Reducer</string>
+    <string name="done_title">Η μεταφορά των τιμών ολοκληρώθηκε!</string>
+    <string name="reduce_done">Πήρες τις τελικές τιμές από τον Reducer!</string>
+    <string name="reducer_done_message">Πάτα ΟΚ για να δεις τα αποτελέσματα!</string>
+    <string name="set_position_title">Πρέπει να καθορίσεις την περιοχή!</string>
+    <string name="set_position_message"> Για να ξεκινήσει η διαδικασία πρέπει πρώτα να επιλέξεις την επιθυμητή περιοχή</string>
 </resources>

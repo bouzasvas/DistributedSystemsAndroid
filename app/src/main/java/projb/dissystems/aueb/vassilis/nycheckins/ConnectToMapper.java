@@ -1,6 +1,7 @@
 package projb.dissystems.aueb.vassilis.nycheckins;
 
 import android.os.AsyncTask;
+import android.util.Log;
 
 import java.io.IOException;
 import java.io.ObjectInputStream;
@@ -10,7 +11,7 @@ import java.net.Socket;
 import java.net.UnknownHostException;
 import java.util.List;
 
-public class ConnectToMapper extends AsyncTask {
+public class ConnectToMapper extends AsyncTask<Void, Void, Boolean> {
 
 
     private double minX, maxX, minY, maxY;
@@ -42,9 +43,12 @@ public class ConnectToMapper extends AsyncTask {
         this.maxDatetime = maxDatetime;
     }
 
-    public void connect() {    //this method establishes the connection
+    public Boolean connect() {    //this method establishes the connection
+        Boolean isConnected = false;
         try {
             client = new Socket(InetAddress.getByName(address), port);
+
+            isConnected = client.isConnected();
 
             out = new ObjectOutputStream(client.getOutputStream());
             in = new ObjectInputStream(client.getInputStream());
@@ -76,6 +80,7 @@ public class ConnectToMapper extends AsyncTask {
         } catch (IOException e) {
             System.err.println("Could not connect...");
         }
+        return isConnected;
     }
 
     public void closeConnection() {
@@ -89,8 +94,13 @@ public class ConnectToMapper extends AsyncTask {
     }
 
     @Override
-    protected Object doInBackground(Object[] params) {
-        connect();
-        return null;
+    protected Boolean doInBackground(Void[] params) {
+        return connect();
+    }
+
+    @Override
+    protected void onPostExecute(Boolean aBoolean) {
+        super.onPostExecute(aBoolean);
+        //closeConnection();
     }
 }

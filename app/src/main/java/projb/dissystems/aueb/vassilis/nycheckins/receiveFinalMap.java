@@ -1,7 +1,9 @@
 package projb.dissystems.aueb.vassilis.nycheckins;
 
+import android.app.ProgressDialog;
 import android.content.res.AssetManager;
 import android.os.AsyncTask;
+import android.os.Handler;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -18,13 +20,15 @@ import java.util.Map;
 /**
  * Created by Vassilis on 9/5/2016.
  */
-public class receiveFinalMap extends AsyncTask<Void, Void, Map<Object, Long>> {
+public class receiveFinalMap extends AsyncTask {
 
     // PORTS
     List<String> addr_ports = null;
 
     // final result from reducer
-    private Map<Object, Long> finalResult = null;
+    onMapReceived completed;
+    Handler handler;
+    private Map<Object, Long> reducerResult = null;
 
     // network fields
     private int port;
@@ -33,8 +37,10 @@ public class receiveFinalMap extends AsyncTask<Void, Void, Map<Object, Long>> {
     private ObjectInputStream in = null;
     private ObjectOutputStream out = null;
 
-    public receiveFinalMap(List<String> ports) {
+    public receiveFinalMap(List<String> ports, Handler handler, onMapReceived completed) {
         addr_ports = ports;
+        this.handler = handler;
+        this.completed = completed;
     }
 
     public void initConnection() {
@@ -51,7 +57,7 @@ public class receiveFinalMap extends AsyncTask<Void, Void, Map<Object, Long>> {
 
     private void receiveFromReducer() {
         try {
-            finalResult = (Map<Object, Long>) in.readObject();
+            reducerResult = (Map<Object, Long>) in.readObject();
         } catch (ClassNotFoundException | IOException e) {
             e.printStackTrace();
         } finally {
@@ -66,10 +72,23 @@ public class receiveFinalMap extends AsyncTask<Void, Void, Map<Object, Long>> {
         }
     }
 
+
     @Override
-    protected Map<Object, Long> doInBackground(Void... params) {
+    protected Object doInBackground(Object[] params) {
         initConnection();
         receiveFromReducer();
-        return finalResult;
+        handler.post(new Runnable() {
+            @Override
+            public void run() {
+                MapsActivity.finalResult = reducerResult;
+            }
+        });
+        return null;
+    }
+
+    @Override
+    protected void onPostExecute(Object o) {
+        super.onPostExecute(o);
+        completed.onMapReceived();
     }
 }

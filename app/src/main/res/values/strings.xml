@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name" translatable="false">Big (App)le</string>
+    <string name="app_name" translatable="false">Big App(le)</string>
     <string name="title_activity_ny_map">Map</string>
 
     <string name="hello">Hello!</string>
@@ -30,7 +30,23 @@
     <string name="alert_message">App will close now for changes to be saved!</string>
     <string name="title_activity_maps">Map</string>
 
-    <string name="topK">Top Results?</string>
     <string name="done_button">DONE</string>
-
+    <string name="howToUse">How to use the app?</string>
+    <string name="howToUseText">Long press somewhere in the map and a Marker will appear.
+                    Long press again to create a second Marker and you\'ll see a circle on the map.
+                    You can move the center or the radius anywhere you want to select the area you for which
+                    you want to get most famous places. If you long press againg the map the circle will be removed
+                    to start the proceduce from the beginning. When you\'re ready press the button \"DONE\" to get results.
+    </string>
+    <string name="topK">Top Results?</string>
+    <string name="mapper_offline_text">You are not connected to a network or mappers are unavailable right now...</string>
+    <string name="mapper_offline">Connection problem!</string>
+    <string name="empty_text_title">Empty field \"Top results?\"</string>
+    <string name="empty_text_message">You should first put a number in the field and then click DONE</string>
+    <string name="done_title">Transfering values completed!</string>
+    <string name="done_message">Press OK and wait for results from Reducer</string>
+    <string name="reduce_done">You got final result from Reducer!</string>
+    <string name="reducer_done_message">Press OK to see the results!</string>
+    <string name="set_position_title">Set area first!</string>
+    <string name="set_position_message">For process to begin it\'s necessary to set the desired area</string>
 </resources>
