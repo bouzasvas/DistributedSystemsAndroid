@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="mainButton">ΒΡΕΣ ΤΑ ΔΗΜΟΦΗΛΕΣΤΕΡΑ ΜΕΡΗ ΣΤΗ ΝΥ</string>
+    <string name="mainButton">ΒΡΕΣ ΤΑ ΔΗΜΟΦΙΛΕΣΤΕΡΑ ΜΕΡΗ ΣΤΗ ΝΥ</string>
     <string name="info">Βασισμένο στο Foursquare</string>
     <string name="hello">Γεια!</string>
     <string name="info_dev_title">Προγραμματιστές</string>
@@ -27,10 +27,9 @@
     <string name="title_activity_maps">Χάρτης</string>
     <string name="done_button">EΤΟΙΜΟΣ</string>
     <string name="howToUse">Πως να χρησιμοποιήσω την εφαρμογή;</string>
-    <string name="howToUseText">Πατώντας συνεχόμενα πάνω στον χάρτη θα εμφανιστεί μία πινέζα. Αν ξαναπατήσεις συνεχόμενα θα
-                            δημιουργηθεί ένας κύκλος με ακτίνα το σημείο που πάτησες. Μπορείς να μετακινήσεις είτε το κέντρο
-                            είτε την ακτίνα στο σημείο που θες προκειμένου να επιλέξεις την περιοχή για την οποία θες να δεις
-                            τα δημοφιλέστερα μέρη. Αν πατήσεις συνεχόμενα ξανά ο κύκός θα εξαφανιστεί ώστε να ξεκινήσεις από
+    <string name="howToUseText">Πατώντας συνεχόμενα πάνω στον χάρτη θα εμφανιστούν δύο πινέζες και θα σχηματιστεί ένα τετράγωνο.
+                            Μπορείς να τις μετακινήσεις προκειμένου να επιλέξεις την περιοχή για την οποία θες να δεις
+                            τα δημοφιλέστερα μέρη. Αν πατήσεις συνεχόμενα ξανά το τετράγωνο θα εξαφανιστεί ώστε να ξεκινήσεις από
                             την αρχή την διαδικασία. Όταν είσαι έτοιμος πάτα το κουμπί \"ΕΤΟΙΜΟΣ\" για να πάρεις τα αποτελέσματα.
     </string>
     <string name="topK">Τοπ αποτελέσματα;</string>
@@ -44,4 +43,16 @@
     <string name="reducer_done_message">Πάτα ΟΚ για να δεις τα αποτελέσματα!</string>
     <string name="set_position_title">Πρέπει να καθορίσεις την περιοχή!</string>
     <string name="set_position_message"> Για να ξεκινήσει η διαδικασία πρέπει πρώτα να επιλέξεις την επιθυμητή περιοχή</string>
+    <string name="reduce_progress">Παρακαλώ περιμένετε όσο τα αποτελέσματα φτάνουν από τον Reducer...</string>
+    <string name="from_date">Από ημερομηνία...</string>
+    <string name="to_date">Έως ημερομηνία...</string>
+    <string name="set">ΟΡΙΣΜΟΣ</string>
+    <string name="empty_fromDate_title">Το πεδίο \"Από ημερομηνία\" είναι κενό</string>
+    <string name="empty_fromDate_message">Πρέπει πρώτα να ορίσεις το πεδίο \"Από ημερομηνία\" για να συνεχίσεις...</string>
+    <string name="empty_toDate_title">Το πεδίο \"Έως ημερομηνία\" είναι κενό</string>
+    <string name="empty_toDate_message">Πρέπει πρώτα να ορίσεις το πεδίο \"Έως ημερομηνία\" για να συνεχίσεις...</string>
+    <string name="results_info">Tα αποτελέσματα είναι ταξινομημένα ως προς τη δημοτικότητά τους</string>
+    <string name="showHideLayout">Εμφάνιση/Απόκρυψη αποτελεσμάτων</string>
+    <string name="seePicsLabel">Δες Φωτογραφίες!</string>
+    <string name="savePicButton">ΑΠΟΘΗΚΕΥΣΗ ΕΙΚΟΝΑΣ</string>
 </resources>

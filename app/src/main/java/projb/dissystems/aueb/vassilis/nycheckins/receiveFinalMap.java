@@ -1,6 +1,7 @@
 package projb.dissystems.aueb.vassilis.nycheckins;
 
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.res.AssetManager;
 import android.os.AsyncTask;
 import android.os.Handler;
@@ -28,7 +29,11 @@ public class receiveFinalMap extends AsyncTask {
     // final result from reducer
     onMapReceived completed;
     Handler handler;
-    private Map<Object, Long> reducerResult = null;
+    private Map<Object, List> reducerResult = null;
+
+    //Progress Dialog
+    Context map;
+    ProgressDialog progress = null;
 
     // network fields
     private int port;
@@ -37,10 +42,12 @@ public class receiveFinalMap extends AsyncTask {
     private ObjectInputStream in = null;
     private ObjectOutputStream out = null;
 
-    public receiveFinalMap(List<String> ports, Handler handler, onMapReceived completed) {
+    public receiveFinalMap(List<String> ports, Handler handler, onMapReceived completed, Context map) {
         addr_ports = ports;
         this.handler = handler;
         this.completed = completed;
+        this.map = map;
+        this.progress = new ProgressDialog(map);
     }
 
     public void initConnection() {
@@ -57,7 +64,7 @@ public class receiveFinalMap extends AsyncTask {
 
     private void receiveFromReducer() {
         try {
-            reducerResult = (Map<Object, Long>) in.readObject();
+            reducerResult = (Map<Object, List>) in.readObject();
         } catch (ClassNotFoundException | IOException e) {
             e.printStackTrace();
         } finally {
@@ -72,6 +79,12 @@ public class receiveFinalMap extends AsyncTask {
         }
     }
 
+    @Override
+    protected void onPreExecute() {
+        super.onPreExecute();
+        progress.setMessage(map.getString(R.string.reduce_progress));
+        progress.show();
+    }
 
     @Override
     protected Object doInBackground(Object[] params) {
@@ -89,6 +102,7 @@ public class receiveFinalMap extends AsyncTask {
     @Override
     protected void onPostExecute(Object o) {
         super.onPostExecute(o);
+        progress.dismiss();
         completed.onMapReceived();
     }
 }
