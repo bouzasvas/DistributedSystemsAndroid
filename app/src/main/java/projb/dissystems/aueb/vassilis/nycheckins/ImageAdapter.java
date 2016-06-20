@@ -13,6 +13,8 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListAdapter;
 
+import com.squareup.picasso.Picasso;
+
 import java.io.InputStream;
 import java.net.URL;
 import java.util.ArrayList;
@@ -44,8 +46,8 @@ public class ImageAdapter extends BaseAdapter {
         return photosURL.size();
     }
 
-    public ImageView getItem(int position) {
-        return images.get(position);
+    public String getItem(int position) {
+        return photosURL.get(position);
     }
 
     public long getItemId(int position) {
@@ -64,18 +66,13 @@ public class ImageAdapter extends BaseAdapter {
             imageView = (ImageView) convertView;
         }
 
-        //new DownloadImageTask(imageView).execute(photosURL.get(position));
-        //imageView.setImageResource(photosTest[position]);
-        loadBitmap(imageView, photosURL.get(position));
+        Picasso.with(mContext)
+                .load(photosURL.get(position))
+                .placeholder(R.drawable.loader)
+                .fit()
+                .centerCrop().into(imageView);
+
         images.add(imageView);
         return imageView;
-    }
-
-    public void loadBitmap(ImageView imageView, String url) {
-        final DownloadImageTask task = new DownloadImageTask(imageView);
-        final AsyncDrawable asyncDrawable =
-                new AsyncDrawable(task);
-        imageView.setImageDrawable(asyncDrawable);
-        task.execute(url);
     }
 }

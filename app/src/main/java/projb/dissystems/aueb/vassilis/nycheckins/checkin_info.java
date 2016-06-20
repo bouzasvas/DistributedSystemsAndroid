@@ -43,14 +43,11 @@ public class checkin_info extends AppCompatActivity {
         photos.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                ImageView currentPhoto = (ImageView) photos.getAdapter().getItem(position);
-                currentPhoto.buildDrawingCache();
-                Bitmap bitmap = currentPhoto.getDrawingCache();
+                String currentPhotoURL = (String) photos.getAdapter().getItem(position);
 
                 Intent showImage = new Intent(checkin_info.this, view_image.class);
-                ByteArrayOutputStream bs = new ByteArrayOutputStream();
-                bitmap.compress(Bitmap.CompressFormat.PNG, 50, bs);
-                showImage.putExtra("photo", bs.toByteArray());
+                showImage.putExtra("poi", poi_name.getText().toString() + "_" + position);
+                showImage.putExtra("photoURL", currentPhotoURL);
                 startActivity(showImage);
 
             }

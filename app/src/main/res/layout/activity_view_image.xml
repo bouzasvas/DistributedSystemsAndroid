@@ -20,6 +20,7 @@
         android:text="@string/savePicButton"
         android:id="@+id/savePic"
         android:layout_weight="0.15"
-        android:background="@drawable/button_effect" />
+        android:background="@drawable/button_effect"
+        android:onClick="saveImage" />
 
 </LinearLayout>

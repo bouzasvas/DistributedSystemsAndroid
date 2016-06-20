@@ -36,11 +36,6 @@ public class results extends AppCompatActivity {
         results.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-//                AlertDialog.Builder alertBuilder = new AlertDialog.Builder(results.this);
-//                alertBuilder.setTitle("Selected Item");
-//                alertBuilder.setMessage("You have selected " + results.getAdapter().getItem(position));
-//                AlertDialog dialog = alertBuilder.create();
-//                dialog.show();
                 String poi_name = results.getAdapter().getItem(position).toString();
                 String poi = null;
 
