@@ -1,8 +1,10 @@
 package projb.dissystems.aueb.vassilis.nycheckins;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.graphics.Point;
 import android.graphics.drawable.Drawable;
+import android.support.v7.app.AlertDialog;
 import android.view.Display;
 import android.view.View;
 import android.view.ViewGroup;
@@ -60,17 +62,22 @@ public class ImageAdapter extends BaseAdapter {
         if (convertView == null) {
             // if it's not recycled, initialize some attributes
             imageView = new ImageView(mContext);
-            imageView.setLayoutParams(new GridView.LayoutParams((size.x) / 2, (size.y) / 3));
-            imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
         } else {
             imageView = (ImageView) convertView;
         }
 
-        Picasso.with(mContext)
-                .load(photosURL.get(position))
-                .placeholder(R.drawable.loader)
-                .fit()
-                .centerCrop().into(imageView);
+        if (!photosURL.get(position).equals("Not exists")) {
+            imageView.setLayoutParams(new GridView.LayoutParams((size.x) / 2, (size.y) / 3));
+            imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
+            Picasso.with(mContext)
+                    .load(photosURL.get(position))
+                    .placeholder(R.drawable.loader)
+                    .fit()
+                    .centerCrop().into(imageView);
+        } else {
+
+            imageView.setImageResource(R.drawable.no_image_icon);
+        }
 
         images.add(imageView);
         return imageView;

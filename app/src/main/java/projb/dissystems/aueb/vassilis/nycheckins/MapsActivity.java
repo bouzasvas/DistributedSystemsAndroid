@@ -598,13 +598,13 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             initLayout.setVisibility(View.VISIBLE);
 
             LinearLayout.LayoutParams params = (LinearLayout.LayoutParams) mapFragment.getView().getLayoutParams();
-            params.weight = 0.63F;
+            params.weight = 0.60F;
             mapFragment.getView().setLayoutParams(params);
         } else {
             initLayout.setVisibility(View.GONE);
 
             LinearLayout.LayoutParams params = (LinearLayout.LayoutParams) mapFragment.getView().getLayoutParams();
-            params.weight = 1.05F;
+            params.weight = 1.00F;
             mapFragment.getView().setLayoutParams(params);
         }
     }

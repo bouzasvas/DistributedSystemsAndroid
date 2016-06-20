@@ -12,7 +12,7 @@
         android:layout_height="0dp"
         android:orientation="vertical"
         android:id="@+id/initValues_layout"
-        android:layout_weight="0.42"
+        android:layout_weight="0.40"
         android:layout_marginBottom="2px">
 
         <LinearLayout
@@ -118,15 +118,15 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         tools:context="projb.dissystems.aueb.vassilis.nycheckins.MapsActivity"
-        android:layout_weight="0.63" />
+        android:layout_weight="0.60" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:text="@string/showHideLayout"
         android:id="@+id/showHideLayout_button"
         android:onClick="showHideLayout"
-        android:layout_weight="0.05" />
+        android:layout_weight="0.10" />
 
 </LinearLayout>

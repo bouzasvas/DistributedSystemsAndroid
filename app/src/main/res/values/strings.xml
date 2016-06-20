@@ -60,4 +60,5 @@
     <string name="showHideLayout">Show/Hide Results</string>
     <string name="seePicsLabel">See Pics!</string>
     <string name="savePicButton">SAVE PICTURE</string>
+    <string name="no_images">No images found for selected POI!</string>
 </resources>
