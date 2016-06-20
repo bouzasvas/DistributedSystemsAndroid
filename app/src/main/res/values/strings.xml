@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name" translatable="false">Big App(le)</string>
+    <string name="app_name" translatable="false">The Big App{le}</string>
     <string name="title_activity_ny_map">Map</string>
 
     <string name="hello">Hello!</string>
@@ -32,11 +32,10 @@
 
     <string name="done_button">DONE</string>
     <string name="howToUse">How to use the app?</string>
-    <string name="howToUseText">Long press somewhere in the map and a Marker will appear.
-                    Long press again to create a second Marker and you\'ll see a circle on the map.
-                    You can move the center or the radius anywhere you want to select the area you for which
-                    you want to get most famous places. If you long press againg the map the circle will be removed
-                    to start the proceduce from the beginning. When you\'re ready press the button \"DONE\" to get results.
+    <string name="howToUseText">Long press somewhere in the map and a Polygon with 4 Markers will appear.
+                    You can move the 2 Markers to resize polygon and select the area you\'re interested in.
+                    If you long press again the map the polygon will be removed to start the proceduce from the beginning.
+                    When you\'re ready press the button \"DONE\" to get results.
     </string>
     <string name="topK">Top Results?</string>
     <string name="mapper_offline_text">You are not connected to a network or mappers are unavailable right now...</string>
@@ -49,4 +48,16 @@
     <string name="reducer_done_message">Press OK to see the results!</string>
     <string name="set_position_title">Set area first!</string>
     <string name="set_position_message">For process to begin it\'s necessary to set the desired area</string>
+    <string name="reduce_progress">Please wait while results come from Reducer...</string>
+    <string name="from_date">From date...</string>
+    <string name="to_date">To date...</string>
+    <string name="set">SET</string>
+    <string name="empty_fromDate_title">\"From date\" field is empty</string>
+    <string name="empty_fromDate_message">You should first set \"From date\" field to continue...</string>
+    <string name="empty_toDate_title">\"To date\" field is empty</string>
+    <string name="empty_toDate_message">You should first set \"Το date\" field to continue...</string>
+    <string name="results_info">The results are sorted by popularity</string>
+    <string name="showHideLayout">Show/Hide Results</string>
+    <string name="seePicsLabel">See Pics!</string>
+    <string name="savePicButton">SAVE PICTURE</string>
 </resources>

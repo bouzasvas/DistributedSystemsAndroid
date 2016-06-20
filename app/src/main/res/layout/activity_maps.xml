@@ -1,40 +1,132 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mapLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/background"
+    android:weightSum="1.10">
 
     <LinearLayout
-        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:weightSum="1">
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:id="@+id/initValues_layout"
+        android:layout_weight="0.42"
+        android:layout_marginBottom="2px">
 
-        <EditText
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:id="@+id/topK_layout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/topK_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.73"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#FFFFFF"
+                android:hint="@string/topK" />
+
+            <Spinner
+                android:id="@+id/topK_selector"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:layout_weight="0.27"
+                android:spinnerMode="dropdown" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/fromDate_layout"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/topK_text"
-            android:hint="@string/topK"
-            android:layout_weight="0.80"
-            android:inputType="number" />
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:id="@+id/from_date"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.73"
+                android:hint="@string/from_date"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#FFFFFF" />
+
+            <Button
+                android:id="@+id/from_date_button"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.27"
+                android:onClick="setFromDate"
+                android:text="@string/set"
+                android:background="@drawable/button_effect"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/toDate_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:id="@+id/to_date"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.73"
+                android:hint="@string/to_date"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#FFFFFF" />
+
+            <Button
+                android:id="@+id/to_date_button"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.27"
+                android:onClick="setToDate"
+                android:text="@string/set"
+                android:background="@drawable/button_effect"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
 
         <Button
-            style="?android:attr/buttonStyleSmall"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/done_button"
             android:id="@+id/done_button"
-            android:layout_gravity="right"
-            android:layout_weight="0.20"
-            android:onClick="doneButtonClick" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="doneButtonClick"
+            android:text="@string/done_button"
+            android:background="@drawable/button_effect"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="10dp" />
 
     </LinearLayout>
 
     <fragment xmlns:map="http://schemas.android.com/apk/res-auto"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
         android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
         tools:context="projb.dissystems.aueb.vassilis.nycheckins.MapsActivity"
-        android:name="com.google.android.gms.maps.SupportMapFragment" />
+        android:layout_weight="0.63" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/showHideLayout"
+        android:id="@+id/showHideLayout_button"
+        android:onClick="showHideLayout"
+        android:layout_weight="0.05" />
 
 </LinearLayout>
